@@ -60,7 +60,7 @@ if (isset($headers['X-Hub-Signature-256'])) {
 } else {
     writeLog('Unauthorized request - No signature');
     http_response_code(401);
-    die('Unauthorized');
+    die('Unauthorized!');
 }
 
 $data = json_decode($payload, true);
